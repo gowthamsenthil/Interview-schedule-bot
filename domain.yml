@@ -1,0 +1,147 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - query_company_info
+  - query_work_mode
+  - query_location
+  - query_job_description
+  - query_salary_description
+  - query_working_hours
+  - candidate_time_slot
+  - getnumber
+  - free
+  - busy
+  - interested
+  - uninterested
+
+entities:
+  - time
+
+slots:
+  time:
+    type: text
+    mappings :   
+    - type: from_entity
+      entity: time
+
+actions:
+  - utter_greet
+  - utter_obtain_alternate_number
+  - utter_ask_for_alternate_number
+  - utter_thank
+  - utter_sorry
+  - utter_call_another_time
+  - utter_ask_candidate_goodtimetotalk
+  - utter_sales_pitch
+  - utter_company_description
+  - utter_job_description
+  - utter_salary
+  - utter_location
+  - utter_workmode
+  - utter_work_hours
+  - utter_wrong_question
+  - utter_any_more_questions
+  - utter_ask_schedule
+  - utter_first_scheduler
+  - utter_ask_date_scheduler
+  - utter_ask_time_scheduler
+  - utter_invalid_date
+  - utter_invalid_time
+  - utter_final_scheduler
+  - utter_get_in_touch
+  - utter_goodbye
+  - utter_iamabot
+  - candidate_time_slot
+  - action_candidate_time_slot
+  - utter_ask_if_interested
+
+
+responses:
+  utter_ask_if_interested:
+  - text: "Are you interested in attending an online interview ?"
+  utter_greet:
+  - text: "Hello I am chatbot from DMI finance.We found your resume on LinkedIn.
+            Am I speaking to Mr.X?"
+  utter_iamabot:
+  - text: "Hello I am bot from Simpragma Solutions"
+  
+  utter_ask_for_alternate_number:
+  - text: "Is there an alternate number to contact Mr.X?"
+
+  utter_obtain_alternate_number:
+  - text: "could you please type the phone number in the keypad"
+
+  utter_thank:
+  - text: "Thank you we will get in touch with Mr.X"
+
+  utter_sorry:
+  - text: "Sorry for the inconvinience"
+
+  utter_call_another_time:
+  - text: "Sorry for the inconvinience when would be a good time to reach you?"
+
+  utter_ask_candidate_goodtimetotalk:
+  - text: "We have a fantastic opportunity for you at DMI finance . Is this a good time to talk?"
+
+  utter_sales_pitch:
+  - text: "Led by technology, powered by new thinking and driven by synergistic partnerships, DMI Finance is re-defining consumer finance, housing finance and corporate lending with pioneering models.. You can ask us any questions that you may have regarding this opportunity."
+
+  utter_company_description:
+  - text: "DMI Finance is re-defining consumer finance, housing finance and corporate lending with pioneering models"
+
+  utter_job_description:
+  - text: " Java developer"
+
+  utter_salary:
+  - text: "10lpa CTC, base is 7 lakhs, Medical Insurance upto 4 lakhs per year"
+
+  utter_location:
+  - text: "Express Building, 9-10, 3rd Floor, Bahadur Shah Zafar Marg, New Delhi, Delhi 110002"
+
+  utter_workmode:
+  - text: "3 days in office, 2 days WFH"
+
+  utter_work_hours:
+  - text: "10am-6pm with 1hr lunch break"
+
+  utter_wrong_question:
+  - text: "Please contact the HR for this information through mail after this call"
+
+  utter_any_more_questions:
+  - text: "Do you have any more questions before we can proceed further? "
+
+  utter_ask_schedule:
+  - text: "When can I schedule the interview ?"
+
+  utter_first_scheduler:
+  - text: "That's fine, We would like to schedule on {time}. Is that okay?"
+
+  utter_ask_date_scheduler:
+  - text: "That's great, may I know at what date you will be available? "
+
+  utter_ask_time_scheduler:
+  - text: "That's great, may I know at what time you will be available? "
+
+  utter_invalid_date:
+  - text: "Could you please mention a valid date?"
+
+  utter_invalid_time:
+  - text: "That's great, may I know at what time you will be available? "
+
+  utter_final_scheduler:
+  - text: "Sounds Good ! Your Interview is scheduled on {time}. More details will be shared through e-mail"
+
+  utter_get_in_touch:
+  - text: "That 's okay, the HR representative shall get in touch with you on {time}. Have a great day"
+
+  utter_goodbye:
+  - text: "Have a great day !"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

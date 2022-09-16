@@ -1,0 +1,294 @@
+version: "3.1"
+
+
+stories:
+ 
+- story: Happy Path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: deny
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  - action: action_candidate_time_slot
+  
+
+- story: Happy Path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_job_description
+  - action: utter_job_description
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  #- action: utter_final_scheduler
+  - action: action_candidate_time_slot
+
+- story: Happy Path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_company_info
+  - action: utter_company_description
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  - action: action_candidate_time_slot
+ #- action: utter_final_scheduler
+
+- story: Happy Path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_salary_description
+  - action: utter_salary
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  #- action: utter_final_scheduler
+  - action: action_candidate_time_slot
+
+
+
+- story: Happy Path 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_working_hours
+  - action: utter_work_hours
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  #- action: utter_final_scheduler
+  - action: action_candidate_time_slot
+
+- story: Happy Path 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_work_mode
+  - action: utter_workmode
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  - action: action_candidate_time_slot
+  #- action: utter_final_scheduler
+
+- story: Happy Path 7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or :
+    - intent: free
+    - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_location
+  - action: utter_location
+  - action: utter_ask_if_interested
+  - or:
+    - intent: affirm
+    - intent: interested
+  - action: utter_ask_schedule
+  - intent: candidate_time_slot
+  - action: action_candidate_time_slot
+
+- story: Sad Path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_ask_for_alternate_number
+  - intent: affirm
+  - action: utter_obtain_alternate_number
+  - intent: getnumber
+  - action: utter_thank
+
+- story: Sad Path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_ask_for_alternate_number
+  - intent: deny
+  - action: utter_sorry
+
+- story: Sad Path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: deny
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_job_description
+  - action: utter_job_description
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_company_info
+  - action: utter_company_description
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_salary_description
+  - action: utter_salary
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_working_hours
+  - action: utter_work_hours
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: query_work_mode
+  - action: utter_workmode
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - intent: affirm
+  - action: utter_sales_pitch
+  - intent: deny
+  - action: utter_ask_if_interested
+  - or:
+    - intent: uninterested
+    - intent: deny
+  - action: utter_thank
+
+- story: Sad Path 10
+  steps :
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_candidate_goodtimetotalk
+  - or:
+      - intent: busy
+      - intent: deny
+  - action: utter_call_another_time
+  - intent: candidate_time_slot
+  - action: utter_get_in_touch

@@ -1,0 +1,49 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+#- rule: Company description
+#  steps:
+#   - intent: query_company_info
+#   - action: utter_company_description 
+#   - action: utter_any_more_questions
+
+#- rule: Salary description
+#  steps:
+#   - intent: query_salary_description
+#   - action: utter_salary
+#   - action: utter_any_more_questions
+
+#- rule: Working Hours
+#  steps:
+#   - intent: query_working_hours
+#   - action: utter_work_hours
+#   - action: utter_any_more_questions
+
+#- rule: Work mode
+#  steps:
+#   - intent: query_work_mode
+#   - action: utter_workmode
+#   - action: utter_any_more_questions
+
+#- rule: Job description
+#  steps:
+#   - intent: query_job_description
+#   - action: utter_job_description
+#   - action: utter_any_more_questions
+
+#- rule: Location
+#  steps:
+#   - intent: query_location
+#   - action: utter_location 
+#   - action: utter_any_more_questions

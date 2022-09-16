@@ -1,0 +1,203 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: free
+  examples: |
+    - free
+    - available
+    - unoccupied
+    - know more
+    - all ears
+    - good time
+
+- intent: busy
+  examples: |
+   - busy
+   - unavailable
+   - occupied
+   - overwhelmed 
+   - buried
+   - callback
+   - working
+   - engaged
+   - engrossed 
+   - lot on plate
+   - hectic
+   - call me later
+   - later
+   - in a meeting
+
+- intent: interested
+  examples: |
+   - excited
+   - keen
+   - continue
+   - more details
+   - interesting
+   - interested
+   - looking forward
+
+- intent: uninterested
+  examples: |
+   - uninterested
+   - not interested
+   - decline
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yes I am
+    - yeah
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yup
+    - okay
+    - ok
+    - sure
+    - cool
+    - aye
+    - fine
+    - alright
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nah
+    - nay
+    - nope
+    - sorry
+    - not correct
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - will not work for me
+
+- intent: query_company_info
+  examples: |
+    - I want to know more about the company
+    - Can you tell me more about the company ?
+    - May I know more about the company?
+    - Can you give company description? 
+    - What does the company specialize in?
+    - What is your company's mission or purpose?
+    - How long has your company been in business?
+    - What are the company's core values?
+    - What is the company's mission statement?
+    - What products or services does your company offer?
+
+- intent: query_work_mode
+  examples: |
+    - Is it online?
+    - Is it  offline?
+    - what is the work mode?
+    - Can I work from home?
+    - Is the working mode hybrid?
+    - do I need to work from office on all days?
+
+- intent: query_location
+  examples: |
+    - What is the address of the company?
+    - Is the company in a rural or urban area?
+    - What are the coordinates of the company?
+    - Where is the company located?
+    - What is the  nearby landmark ?
+    - Where the work will be?
+    - where is the company situated?
+
+- intent: query_job_description
+  examples: |
+    - May I know the job decription? 
+    - What is the job description ?
+    - Can you tell me the job description ? 
+    - I want to know more about the job
+    - What would be the job?
+    - What is the role and responsibilty ?
+    - What will I be doing?
+    - What is the JD?
+    - Can you tell the JD
+    - May I know the JD?
+    - What work will be assigned to me?
+
+- intent: query_salary_description
+  examples: |
+    - What is my salary?
+    - how is my salary structured?
+    - How will I be paid?
+    - What will be my in hand salary?
+    - When will my salary be paid?
+    - Will I be paid for working Overtime?
+    - What is the CTC offered?
+    - Is there any joining bonus?
+
+- intent: query_working_hours
+  examples: |
+    - What are the company's hours of operation?
+    - does the company operate on weekends?
+    - how many hours a week do I need to work?
+    - How many shifts are there?
+    - what time does work start at?
+    - what time does work end at?
+    - how long are lunch breaks?
+    - How much must a clock in a day?
+    - Is there any flexibility with working hours?
+    - How many days a week do I work?
+
+- intent: candidate_time_slot
+  examples: |
+    - I am free anytime
+    - I am free today
+    - I am free in the afternoon
+    - I am free next week
+    - I am free tomorrow at 6pm
+    - I am free today at 5 pm
+    - I am free next monday
+    - I am free next monday at 5pm
+    - Tomorrow at 7pm
+    - Today evening
+    - I am free today at 11 am
+    - I am free today at 11am
+    - I am free friday at 1pm
+    - Is tomorrow at 5pm okay?
+    - you can schedule on tomorrow at 1pm
+- intent: getnumber
+  examples: |
+    - Number is 9845008141
+    - 7204130806
+    - 080 23513062
+    - +919845008141
+    - His number is 90312381231
