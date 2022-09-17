@@ -4,6 +4,47 @@ The bot is used to converse with potential candidates. The chatbot gives a brief
 
 Developed using Rasa 3.x
 
+## Create and run a python environemnt 
+
+Using Anaconda Prompt
+```bash
+conda create -n envname python=3.6 anaconda
+conda activate env
+```
+Or refer [here](https://www.geeksforgeeks.org/set-up-virtual-environment-for-python-using-anaconda/)
+
+## Create a new rasa project
+
+```bash
+rasa init
+```
+
+## Install dependencies for the bot
+
+```bash
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+2. Run 'pip install rasa-sdk' in the python environment
+```
+
+## Overview of the files( also reffered to as dependencies)
+
+`data/nlu/nlu.yml` - contains NLU training data
+
+`data/nlu/rules.yml` - contains rules training data
+
+`data/stories/stories*.yml` - contains stories training data
+
+`actions.py` - contains custom action/api code
+
+`domain.yml` - the domain file, including bot response templates
+
+`config.yml` - training configurations for the NLU pipeline and policy ensemble
+
+`tests/` - end-to-end tests
+
+## Replace the files
+
+Replace the default contents of the files with files in the repository 
 
 ## Run the bot
 
@@ -22,6 +63,8 @@ Then to talk to the bot, run:
 ```
 rasa shell --debug
 ```
-
 Note that `--debug` mode will produce a lot of output meant to help you understand how the bot is working
 under the hood. To simply talk to the bot, you can remove this flag.
+
+Use should now be able to communicate with the bot in developer mode
+
