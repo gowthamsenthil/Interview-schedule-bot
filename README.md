@@ -22,10 +22,8 @@ rasa init
 
 ## Install dependencies for the bot
 
-```bash
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 2. Run 'pip install rasa-sdk' in the python environment
-```
 
 ## Overview of the files( also reffered to as dependencies)
 
