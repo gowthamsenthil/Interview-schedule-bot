@@ -6,7 +6,7 @@ Developed using Rasa 3.x
 
 ## Create and run a python environemnt 
 
-Using Anaconda Prompt
+Using Anaconda Prompt, run the following commands in the your preferred directory 
 ```bash
 conda create -n envname python=3.6 anaconda
 conda activate env
@@ -15,6 +15,7 @@ Or refer [here](https://www.geeksforgeeks.org/set-up-virtual-environment-for-pyt
 
 ## Create a new rasa project
 
+Run the following commmand after activating the python environment 
 ```bash
 rasa init
 ```
@@ -50,11 +51,11 @@ Replace the default contents of the files with files in the repository
 
 Use `rasa train` to train a model.
 
-Then, to run, first set up your action server in one terminal window, listening on port 5055:
+Then, to run, first set up your action server in one terminal window :
 ```bash
 rasa run actions
 ```
-In another window, run the duckling server (for entity extraction):
+In another prompt window, run the duckling server (for entity extraction):
 
 ```bash
 docker run -p 8000:8000 rasa/duckling
