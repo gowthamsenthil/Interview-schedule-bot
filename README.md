@@ -4,28 +4,30 @@ The bot is used to converse with potential candidates. The chatbot gives a brief
 
 Developed using Rasa 3.x
 
-## Create and run a python environemnt 
+## Steps to run the Bot
+
+### Create and run a python environemnt 
 
 Using Anaconda Prompt, run the following commands in the your preferred directory 
 ```bash
 conda create -n envname python=3.6 anaconda
-conda activate env
+conda activate envname
 ```
 Or refer [here](https://www.geeksforgeeks.org/set-up-virtual-environment-for-python-using-anaconda/)
 
-## Create a new rasa project
+### Create a new rasa project
 
 Run the following commmand after activating the python environment 
 ```bash
 rasa init
 ```
 
-## Install dependencies for the bot
+### Install dependencies for the bot
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 2. Run 'pip install rasa-sdk' in the python environment
 
-## Overview of the files( also reffered to as dependencies)
+### Overview of the files( also reffered to as dependencies)
 
 `data/nlu/nlu.yml` - contains NLU training data
 
@@ -41,11 +43,11 @@ rasa init
 
 `tests/` - end-to-end tests
 
-## Replace the files
+### Replace the files
 
 Replace the default contents of the files with files in the repository 
 
-## Run the bot
+### Run the bot
 
 Use `rasa train` to train a model.
 
